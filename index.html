@@ -1,189 +1,225 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dhruv Rathee's ChatGPT Masterclass</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ChatGPT Mastery by Dhruv Rathee</title>
   <style>
     * {
       box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+      scroll-behavior: smooth;
     }
     body {
-      font-family: 'Inter', sans-serif;
-      background-color: #f9fafb;
-      color: #1f2937;
-      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #000;
+      color: #fff;
     }
-    header {
-      background: linear-gradient(to right, #6366f1, #4f46e5);
-      padding: 80px 20px;
-      color: white;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 3.2rem;
-      font-weight: 800;
-      margin-bottom: 10px;
-    }
-    header p {
-      font-size: 1.2rem;
-      font-weight: 400;
-    }
+
     .container {
-      max-width: 1000px;
+      max-width: 900px;
       margin: 40px auto;
-      padding: 20px;
-      background: white;
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      padding: 30px;
+      backdrop-filter: blur(15px);
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+      text-align: center;
+      animation: fadeInUp 1s ease;
     }
-    .container h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
+
+    .animated-image {
+      width: 180px;
+      border-radius: 50%;
+      animation: pulse 2s ease-in-out infinite alternate;
+      margin-bottom: 25px;
+      box-shadow: 0 0 15px gold;
     }
-    .features {
-      list-style: none;
-      padding-left: 20px;
+
+    h1 {
+      color: gold;
+      font-size: 2.5rem;
+      animation: slideIn 1.5s ease;
     }
-    .features li {
-      margin-bottom: 10px;
-      padding-left: 10px;
-      position: relative;
+
+    .highlight {
+      color: gold;
+      font-weight: bold;
     }
-    .features li::before {
-      content: '✔';
-      color: green;
-      position: absolute;
-      left: -20px;
+
+    .btn {
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      padding: 12px 24px;
+      font-size: 16px;
+      border: 2px solid gold;
+      cursor: pointer;
+      border-radius: 12px;
+      margin: 10px;
+      transition: 0.3s;
     }
-    .price {
-      font-size: 1.6rem;
-      margin: 20px 0;
-      color: #4f46e5;
-      font-weight: 700;
+
+    .btn:hover {
+      background-color: gold;
+      color: #000;
     }
-    .promo {
-      margin: 20px 0;
-    }
-    .promo input {
+
+    input {
       padding: 10px;
-      width: 200px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-    }
-    .promo button {
-      padding: 10px 20px;
-      background-color: #4f46e5;
-      color: white;
+      font-size: 16px;
+      width: 80%;
+      max-width: 400px;
+      margin-top: 15px;
       border: none;
-      border-radius: 6px;
-      margin-left: 10px;
-      cursor: pointer;
-    }
-    .pay-button, .watch-button {
-      display: inline-block;
-      background: #4f46e5;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.1);
       color: white;
-      padding: 14px 30px;
-      border-radius: 8px;
-      font-size: 1.1rem;
-      cursor: pointer;
-      transition: background 0.3s ease;
-      text-decoration: none;
-      margin-top: 20px;
     }
-    .pay-button:hover, .watch-button:hover {
-      background: #4338ca;
-    }
-    iframe.telegram {
-      width: 100%;
-      height: 500px;
-      border: none;
-      margin-top: 30px;
+
+    #courseBtn, #whatsappBtn {
       display: none;
     }
-    footer {
-      text-align: center;
-      padding: 30px 10px;
-      font-size: 0.9rem;
-      color: #6b7280;
+
+    .section {
+      text-align: left;
+      margin-top: 30px;
+      animation: fadeInUp 1.2s ease;
+    }
+
+    .section h3 {
+      color: #fff;
+      border-left: 4px solid gold;
+      padding-left: 12px;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      list-style: square;
+      padding-left: 25px;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+      color: #ccc;
+      transition: 0.3s;
+    }
+
+    ul li:hover {
+      color: gold;
+      transform: translateX(5px);
+    }
+
+    #infoBtn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(8px);
+      color: gold;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      z-index: 100;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse {
+      from { transform: scale(1); }
+      to { transform: scale(1.05); }
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>ChatGPT Masterclass by Dhruv Rathee</h1>
-    <p>Transform your future with AI — now just ₹500</p>
-  </header>  <div class="container">
-    <h2>What You'll Learn</h2>
-    <ul class="features">
-      <li>8.5+ Hours of Video Content</li>
-      <li>Practical AI Tools & Real-world Applications</li>
-      <li>100% Hindi Course with English Subtitles</li>
-      <li>Lifetime Access + Free Future Updates</li>
-    </ul><p class="price" id="priceDisplay">Price: ₹500 only</p><div class="promo">
-  <input type="text" id="promoCode" placeholder="Enter Promo Code">
-  <button onclick="applyPromoCode()">Apply</button>
-</div><a id="buyButton" class="pay-button" onclick="startPayment()">Buy Now & Get Instant Access</a> <a id="watchButton" class="watch-button" style="display:none" onclick="watchCourse()">Watch Course</a>
-<a id="whatsappBtn" class="pay-button" style="display:none; background-color: #25D366;" onclick="sendScreenshotOnWhatsApp()">Send Screenshot on WhatsApp</a>
-<iframe id="telegramContainer" class="telegram" src=""></iframe>  </div>  <footer>
-    &copy; 2025 Dhruv Rathee Courses. All rights reserved.
-</footer>  
-  
+
+<div class="container">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Dhruv_rathee.jpg" alt="Dhruv Rathee" class="animated-image" />
+
+  <h1>ChatGPT Mastery by Dhruv Rathee</h1>
+  <p>🚀 Learn how to dominate productivity and creativity using ChatGPT like a pro!</p>
+
+  <div class="section">
+    <h3>📘 Course Details</h3>
+    <ul>
+      <li>Complete Guide to ChatGPT & AI tools</li>
+      <li>Real-world Use Cases for Content Creation, Business & Study</li>
+      <li>Prompt Engineering Techniques</li>
+      <li>Special Automation Tricks</li>
+      <li>Language: Hindi (with subtitles)</li>
+      <li>Lifetime Access with Certification</li>
+    </ul>
+  </div>
+
+  <h3 class="highlight">💰 Course Price: ₹<span id="price">400</span></h3>
+
+  <input type="text" id="promoCode" placeholder="🎁 Enter Promo Code"/>
+  <br/>
+  <button class="btn" onclick="applyPromoCode()">Apply Code</button>
+  <br/>
+  <button class="btn" onclick="redirectToPayment()">💳 Buy Now</button>
+  <button class="btn" id="courseBtn" onclick="accessCourse()">📂 Access Course</button>
+  <button class="btn" id="whatsappBtn" onclick="sendToWhatsApp()">📤 Send Screenshot</button>
+</div>
+
+<div id="infoBtn" onclick="alert('📢 After payment, send screenshot via WhatsApp to receive course access.')">❓</div>
+
 <script>
-  let finalAmount = 50000; // in paise
-  let freeAccess = false;
+  let originalPrice = 400;
+  let amount = 400;
 
   function applyPromoCode() {
     const code = document.getElementById('promoCode').value.trim().toUpperCase();
-    const priceDisplay = document.getElementById('priceDisplay');
-    const buyBtn = document.getElementById('buyButton');
-    const watchBtn = document.getElementById('watchButton');
-
-    if (code === 'FREE3641') {
-      finalAmount = 0;
-      freeAccess = true;
-      priceDisplay.textContent = 'Price: ₹0 (100% discount applied)';
-      buyBtn.style.display = 'none';
-      watchBtn.style.display = 'inline-block';
-    } else if (code === 'FREE36') {
-      finalAmount = 45000;
-      freeAccess = false;
-      priceDisplay.textContent = 'Price: ₹450 (10% discount applied)';
-      buyBtn.style.display = 'inline-block';
-      watchBtn.style.display = 'none';
+    if (code === "FREE222") {
+      amount = originalPrice * 0.8;
+      alert("✅ 20% discount applied!");
+    } else if (code === "FREE555") {
+      amount = originalPrice * 0.5;
+      alert("✅ 50% discount applied!");
+    } else if (code === "FREE364133") {
+      amount = 0;
+      document.getElementById("courseBtn").style.display = "inline-block";
+      alert("🎉 Free access granted! Click on 'Access Course'");
     } else {
-      finalAmount = 50000;
-      freeAccess = false;
-      priceDisplay.textContent = 'Price: ₹500 only (Invalid code)';
-      buyBtn.style.display = 'inline-block';
-      watchBtn.style.display = 'none';
+      amount = originalPrice;
+      alert("❌ Invalid promo code.");
     }
+    document.getElementById("price").innerText = amount.toFixed(0);
   }
 
-  function startPayment() {
-    const amountInRupees = finalAmount / 100;
-    const upiLink = `upi://pay?pa=6205170591@ybl&pn=ChatGPT Masterclass&am=${amountInRupees}&cu=INR&tn=Payment for ChatGPT Course`;
-
-    // Try to open in UPI apps like PhonePe
-    window.location.href = upiLink;
-
-    // Show WhatsApp screenshot button
-    document.getElementById('whatsappBtn').style.display = 'inline-block';
+  function redirectToPayment() {
+    if (amount === 0) return;
+    const upiUrl = `upi://pay?pa=6205170591@upi&pn=SnapSiksha&am=${amount.toFixed(0)}&cu=INR`;
+    window.location.href = upiUrl;
+    setTimeout(() => {
+      document.getElementById("whatsappBtn").style.display = "inline-block";
+      alert("📤 After payment, please send screenshot via WhatsApp.");
+    }, 4000);
   }
 
-  function watchCourse() {
-    const telegramUrl = "https://www.google.com/url?q=https://t.me/%2BTqWT0fcyB0pkZTkx&sa=U&sqi=2&ved=2ahUKEwimqviJ9-qMAxUqTGwGHfAFOB4QFnoECEQQAQ&usg=AOvVaw2SsCwBNJ0_aLkCCKvuNjb2";
-    window.open(telegramUrl, '_blank');
+  function accessCourse() {
+    window.location.href = "https://www.google.com/url?q=https://t.me/joinchat/4p4rcp2Lb0I1ZDY1";
   }
 
-  function sendScreenshotOnWhatsApp() {
-    const message = encodeURIComponent("Hello, I have made the payment for the ChatGPT Masterclass. Please find the screenshot attached.");
-    const whatsappUrl = `https://wa.me/916205170591?text=${message}`;
-    window.open(whatsappUrl, '_blank');
+  function sendToWhatsApp() {
+    const message = encodeURIComponent(`Hi, I've paid ₹${amount.toFixed(0)} for the ChatGPT course. Please find the screenshot attached.`);
+    window.open(`https://wa.me/919891625865?text=${message}`, "_blank");
   }
 </script>
-</body>
 
+</body>
 </html>
