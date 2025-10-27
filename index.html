@@ -165,7 +165,7 @@
     </ul>
   </div>
 
-  <h3 class="highlight">💰 Course Price: ₹<span id="price">400</span></h3>
+  <h3 class="highlight">💰 Course Price: ₹<span id="price">1000</span></h3>
 
   <input type="text" id="promoCode" placeholder="🎁 Enter Promo Code"/>
   <br/>
@@ -179,8 +179,8 @@
 <div id="infoBtn" onclick="alert('📢 After payment, send screenshot via WhatsApp to receive course access.')">❓</div>
 
 <script>
-  let originalPrice = 400;
-  let amount = 400;
+  let originalPrice = 1000;
+  let amount = 1000;
 
   function applyPromoCode() {
     const code = document.getElementById('promoCode').value.trim().toUpperCase();
@@ -208,7 +208,7 @@
     setTimeout(() => {
       document.getElementById("whatsappBtn").style.display = "inline-block";
       alert("📤 After payment, please send screenshot via WhatsApp.");
-    }, 4000);
+    }, 10000);
   }
 
   function accessCourse() {
